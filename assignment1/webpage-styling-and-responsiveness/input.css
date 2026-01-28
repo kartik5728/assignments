@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+
+.mode-switch-container {
+    cursor: pointer;
+}
+
+.dark-mode-body {
+    background: #000;
+}
+
+.dark-mode-cards * {
+  color: white;
+}
+
+.dark-mode-follow-button {
+    color: black;
+    background-color: aliceblue;
+}
+
+.dark-mode-switch {
+    background-color: aliceblue;
+}
+
+.mode-active {
+    background-color: rgb(254, 255, 172);
+}
+
+.dark-mode-heading-container {
+    color: white;
+}

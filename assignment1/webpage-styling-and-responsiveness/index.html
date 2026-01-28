@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>three colored boxes</title>
+
+<!-- Tailwind css generated stylesheet link -->
+<link rel="stylesheet" href="output.css">
+</head>
+<body>
+
+    <div class="body-wrapper">
+        <nav class="flex items-center justify-center gap-8 px-10 py-2">
+            <!-- <p>Upper Navigation</p> -->
+              <div class="mode-switch-container flex items-center justify-center">
+                <div class="inline-flex border border-gray-300 rounded-full overflow-hidden">
+                <button id="dark-mode-button" class=" px-5 py-2 border-r border-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+                </button>
+                <button id="light-mode-button" class=" px-5 py-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16"><path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/></svg>
+                </button>
+              </div>
+              </div>
+            </nav>
+        <div class="w-full min-h-screen flex flex-col items-center justify-center gap-4 px-5">
+                
+                <div id="heading-container" class="text-center">
+                    <h1 class="text-sm md:text-xl font-bold">Assignment - 1 (Webpage Layout And Responsiveness With Light/Dark Modes)</h1>
+                    <p class="text-center"><i>using grid, flexbox and tailwindcss</i></p>
+                </div>
+
+                <div class="">
+                    <div class="card-container mx-auto grid place-items-center gap-5 grid-cols-[1fr] sm:grid-cols-[1fr_1fr] md:grid-cols-[1fr_1fr_1fr] xl:grid-cols-[1fr_1fr_1fr_1fr]">
+                        <div class="card px-3 py-5 flex flex-col items-center gap-8 border rounded-xl border-gray-300">
+                            <div class="text-inherit flex flex-col items-center">
+                                <div class="image-cover w-[110px] h-[110px]">
+                                <img src="./assets/iron_man.png" class=" w-full h-full object-cover object-top rounded-[50%]">
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <p class="text-xl font-semibold">Tony Stark</p>
+                                <p>Arc Reactor Specialist</p>
+                            </div>
+                            </div>
+
+                            <div>
+                                <div class="pr-20 sm:pr-8">
+                                    <b>ABOUT</b>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum nulla adipisci a eligendi porro culpa ipsa?</p>
+                                </div>
+                                <div class="flex flex-row gap-2">
+                                </div>
+                            </div>
+
+                            <div class="w-full flex flex-row justify-between">
+                                <div class="flex pl-4 flex-row gap-10 items-center">
+                                    <p class="flex gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/></svg>
+                                    121
+                                    </p>
+                                    <p class="flex gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-check" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/><path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/></svg>
+                                    92
+                                    </p>
+                                </div>
+                                
+                                <div>
+                                    <button  class="card-follow-button bg-white cursor-pointer px-3 py-2 rounded-xl font-semibold">Follow +</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card px-3 py-5 flex flex-col items-center gap-8 border rounded-xl border-gray-300">
+                            <div class="flex flex-col items-center">
+                                <div class="image-cover w-[110px] h-[110px]">
+                                <img src="./assets/spider_man.png" class=" w-full h-full object-cover object-top rounded-[50%]">
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <p class="text-xl font-semibold">Peter Parker</p>
+                                <p>Spider-Sense Operations</p>
+                            </div>
+                            </div>
+
+                            <div>
+                                <div class="pr-20 sm:pr-8">
+                                    <b>ABOUT</b>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum nulla adipisci a eligendi porro culpa ipsa?</p>
+                                </div>
+                                <div class="flex flex-row gap-2">
+                                </div>
+                            </div>
+
+                            <div class="w-full flex flex-row justify-between">
+                                <div class="flex pl-4 flex-row gap-10 items-center">
+                                    <p class="flex gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/></svg>
+                                    121
+                                    </p>
+                                    <p class="flex gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-check" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/><path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/></svg>
+                                    92
+                                    </p>
+                                </div>
+                                
+                                <div>
+                                    <button class="card-follow-button bg-white cursor-pointer px-3 py-2 rounded-xl font-semibold">Follow +</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card px-3 py-5 flex flex-col items-center gap-8 border rounded-xl border-gray-300">
+                            <div class="flex flex-col items-center">
+                                <div class="image-cover w-[110px] h-[110px]">
+                                <img src="./assets/baahubali_image.png" class=" w-full h-full object-cover object-top rounded-[50%]">
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <p class="text-xl font-semibold">Prabhas</p>
+                                <p>Actor</p>
+                            </div>
+                            </div>
+
+                            <div>
+                                <div class="pr-20 sm:pr-8">
+                                    <b>ABOUT</b>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum nulla adipisci a eligendi porro culpa ipsa?</p>
+                                </div>
+                                <div class="flex flex-row gap-2">
+                                </div>
+                            </div>
+
+                            <div class="w-full flex flex-row justify-between">
+                                <div class="flex pl-4 flex-row gap-10 items-center">
+                                    <p class="flex gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/></svg>
+                                    121
+                                    </p>
+                                    <p class="flex gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-check" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/><path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/></svg>
+                                    92
+                                    </p>
+                                </div>
+                                
+                                <div>
+                                    <button class="card-follow-button bg-white cursor-pointer px-3 py-2 rounded-xl font-semibold">Follow +</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card px-3 py-5 flex flex-col items-center gap-8 border rounded-xl border-gray-300">
+                            <div class="flex flex-col items-center">
+                                <div class="image-cover w-[110px] h-[110px]">
+                                <img src="./assets/ash_ketchum.png" class=" w-full h-full object-cover object-top rounded-[50%]">
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <p class="text-xl font-semibold">Ash Ketchum </p>
+                                <p>Pokemon Master</p>
+                            </div>
+                            </div>
+
+                            <div>
+                                <div class="pr-20 sm:pr-8">
+                                    <b>ABOUT</b>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum nulla adipisci a eligendi porro culpa ipsa?</p>
+                                </div>
+                                <div class="flex flex-row gap-2">
+                                </div>
+                            </div>
+
+                            <div class="w-full flex flex-row justify-between">
+                                <div class="flex pl-4 flex-row gap-10 items-center">
+                                    <p class="flex gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/></svg>
+                                    121
+                                    </p>
+                                    <p class="flex gap-2 items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-check" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/><path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/></svg>
+                                    92
+                                    </p>
+                                </div>
+                                
+                                <div>
+                                    <button class="card-follow-button bg-white cursor-pointer px-3 py-2 rounded-xl font-semibold">Follow +</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+        </div>
+    </div>
+
+<!-- <p> Copyright 2025</p> -->
+
+<script src="script.js"></script>
+</body>
+</html>
