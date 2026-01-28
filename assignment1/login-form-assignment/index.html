@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main w-full min-h-screen">
+        <div class="main w-full min-h-screen flex flex-col items-center justify-center gap-2 px-10 py-10">
+            <div>
+                <h1 class="text-2xl font-bold">Contact Form in HTML/ CSS/ JS + tailwind css</h1>
+            </div>
+
+            <div>
+               <form class=" w-[340px] md:w-[400px] flex flex-col gap-5 bg-gray-100 px-5 py-4 rounded-xl" action="">
+                <div class="flex flex-col-reverse gap-2">
+                    <input class="form-input px-3 py-2 border border-gray-400 rounded-md" id="form-name" type="text" placeholder="John Doe" required>
+                    <label class="form-label" for="form-name">Full Name</label>
+                </div>
+                <div class="flex flex-col-reverse gap-2">
+                    <input class="form-input px-3 py-2 border border-gray-400 rounded-md" id="form-email" type="email" placeholder="email@example.com" required>
+                    <label class="form-label" for="form-email">Email</label>
+                </div>
+                <div class="flex flex-col-reverse gap-2">
+                    <input class="form-input px-3 py-2 border border-gray-400 rounded-md" id="form-phone" type="text" placeholder="+91 83453 23657" required>
+                    <label class="form-label" for="form-phone">Phone Number</label>
+                </div>
+                <div class="flex flex-col-reverse gap-2">
+                    <select class="form-input px-3 py-2 border border-gray-400 rounded-md" id="form-country" required>
+                        <option value="in">India</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="us">United States</option>
+                        <option value="ge">Germany</option>
+                        <option value="ca">Canada</option>
+                    </select>
+                    <label class="form-label" for="form-country">Country</label>
+                </div>
+
+                <div class="flex flex-col-reverse gap-2">
+                    <textarea class="form-input px-3 py-2 border border-gray-400 rounded-md" rows="5" id="form-message" type="text" placeholder="Your Message" required></textarea>
+                    <label class="form-label" for="form-message">Message</label>
+                </div>
+                
+                <div class="flex flex-row gap-2">
+                    <input class="form-input px-3 py-2 border border-gray-400 rounded-md" type="checkbox" required>
+                    <label class="form-label" for="form-message">I accept Terms & Conditions</label>
+                </div>
+
+                <div class="flex flex-row gap-2">
+                    <button class="w-full cursor-pointer bg-[#645cff] text-white font-medium px-3 py-2 rounded-lg" type="submit">Submit</button>
+                </div>
+               </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

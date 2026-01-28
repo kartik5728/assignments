@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.form-input:focus {
+    outline: none;
+    border: 2px solid rgb(154, 67, 255);
+} 
+
+.form-input:focus + .form-label {
+    color: rgb(154, 67, 255);
+    font-weight:500;
+}
