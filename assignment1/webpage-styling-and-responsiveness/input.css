@@ -29,3 +29,7 @@
 .dark-mode-heading-container {
     color: white;
 }
+
+.toggle-btn {
+    cursor: pointer;
+}

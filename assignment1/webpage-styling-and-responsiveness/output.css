@@ -98,7 +98,7 @@
   }
   img, svg, video, canvas, audio, iframe, embed, object {
     display: block;
-    vertical-align: middle;
+    /* vertical-align: middle; */
   }
   img, video {
     max-width: 100%;
@@ -182,9 +182,6 @@
   .inline-flex {
     display: inline-flex;
   }
-  .table {
-    display: table;
-  }
   .h-\[110px\] {
     height: 110px;
   }
@@ -200,14 +197,8 @@
   .w-full {
     width: 100%;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .grid-cols-\[1fr\] {
     grid-template-columns: 1fr;
@@ -320,13 +311,6 @@
   .text-inherit {
     color: inherit;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
   .sm\:grid-cols-\[1fr_1fr\] {
     @media (width >= 40rem) {
       grid-template-columns: 1fr 1fr;
@@ -335,11 +319,6 @@
   .sm\:pr-8 {
     @media (width >= 40rem) {
       padding-right: calc(var(--spacing) * 8);
-    }
-  }
-  .md\:grid-cols-\[1fr_1fr_1fr\] {
-    @media (width >= 48rem) {
-      grid-template-columns: 1fr 1fr 1fr;
     }
   }
   .md\:text-xl {
@@ -381,6 +360,9 @@
 .dark-mode-heading-container {
   color: white;
 }
+.toggle-btn {
+  cursor: pointer;
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -390,17 +372,11 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
     }
   }
 }
