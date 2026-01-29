@@ -1,4 +1,5 @@
 /*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
+@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -6,6 +7,19 @@
     'Noto Color Emoji';
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
+    --color-gray-100: oklch(96.7% 0.003 264.542);
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -162,11 +176,26 @@
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-50 {
+    width: calc(var(--spacing) * 50);
+  }
   .w-full {
     width: 100%;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
   }
   .items-center {
     align-items: center;
@@ -174,11 +203,115 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+  .bg-\[\#2563eb\] {
+    background-color: #2563eb;
+  }
+  .bg-gray-100 {
+    background-color: var(--color-gray-100);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+  .px-20 {
+    padding-inline: calc(var(--spacing) * 20);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .py-9 {
+    padding-block: calc(var(--spacing) * 9);
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+  .text-\[\#8c49f7\] {
+    color: #8c49f7;
+  }
+  .text-\[\#2664eb\] {
+    color: #2664eb;
+  }
+  .text-\[\#059669\] {
+    color: #059669;
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .sm\:px-6 {
+    @media (width >= 40rem) {
+      padding-inline: calc(var(--spacing) * 6);
+    }
+  }
+  .sm\:px-25 {
+    @media (width >= 40rem) {
+      padding-inline: calc(var(--spacing) * 25);
+    }
+  }
+  .sm\:text-2xl {
+    @media (width >= 40rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
+  .sm\:text-lg {
+    @media (width >= 40rem) {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+  }
 }
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 :root {
   --progress-bar-width: 300px;
   --progress-bar-height: 300px;
-  --font-size: 2rem;
+  --font-size: 4rem;
+}
+.select-button {
+  transition: background-color 0.4s ease;
+}
+.select-button:nth-child(1).active-button {
+  background-color: #d4e0fb;
+}
+.select-button:nth-child(2).active-button {
+  background-color: #d0fcf1;
+}
+.select-button:nth-child(3).active-button {
+  background-color: #e4d1fd;
+}
+.select-button:nth-child(1):hover {
+  background-color: #d4e0fb;
+}
+.select-button:nth-child(2):hover {
+  background-color: #d0fcf1;
+}
+.select-button:nth-child(3):hover {
+  background-color: #e4d1fd;
 }
 .outer-circle-progress {
   width: var(--progress-bar-width);
@@ -187,30 +320,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgb(186, 186, 186);
 }
 .inner-circle {
   position: absolute;
-  width: calc(var(--progress-bar-width) - 30px);
-  height: calc(var(--progress-bar-height) - 30px);
+  width: calc(var(--progress-bar-width) - 12px);
+  height: calc(var(--progress-bar-height) - 12px);
   border-radius: 50%;
-  background-color: lightgrey;
+  background-color: rgb(239, 239, 239);
 }
 .percentage {
-  position: relative;
   font-size: var(--font-size);
-  color: rgb(0, 0, 0, 0.8);
 }
 @media screen and (max-width: 800px) {
   :root {
-    --progress-bar-width: 190px;
-    --progress-bar-height: 190px;
+    --progress-bar-width: 250px;
+    --progress-bar-height: 250px;
     --font-size: 1.3rem;
   }
 }
 @media screen and (max-width: 500px) {
   :root {
-    --progress-bar-width: 120px;
-    --progress-bar-height: 120px;
-    --font-size: 1rem;
+    --progress-bar-width: 200px;
+    --progress-bar-height: 200px;
+    --font-size: 3rem;
+  }
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-font-weight: initial;
+    }
   }
 }

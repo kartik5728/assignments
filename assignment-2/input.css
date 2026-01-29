@@ -1,10 +1,43 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 
 :root {
   --progress-bar-width: 300px;
   --progress-bar-height: 300px;
-  --font-size: 2rem;
+  --font-size: 4rem;
 }
+
+.select-button {
+      transition: background-color 0.4s ease;
+}
+
+.select-button:nth-child(1).active-button {
+  background-color: #d4e0fb;
+}
+
+.select-button:nth-child(2).active-button {
+  background-color: #d0fcf1;
+}
+
+.select-button:nth-child(3).active-button {
+  background-color: #e4d1fd;
+}
+
+.select-button:nth-child(1):hover {
+  background-color: #d4e0fb;
+}
+
+.select-button:nth-child(2):hover {
+  background-color: #d0fcf1;
+}
+
+.select-button:nth-child(3):hover {
+  background-color: #e4d1fd;
+}
+
+
+
 
 .outer-circle-progress {
     width: var(--progress-bar-width);
@@ -13,34 +46,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(186, 186, 186);
 }
 
 .inner-circle {
     position: absolute;
-    width: calc(var(--progress-bar-width) - 30px);
-    height: calc(var(--progress-bar-height) - 30px);
+    width: calc(var(--progress-bar-width) - 12px);
+    height: calc(var(--progress-bar-height) - 12px);
     border-radius: 50%;
-    background-color: lightgrey;
+    background-color: rgb(239, 239, 239);
 }
 
 .percentage {
-  position: relative;
+  /* position: relative; */
   font-size: var(--font-size);
-  color: rgb(0, 0, 0, 0.8);
+  /* color: rgb(0, 0, 0, 0.8); */
 }
+
+
 
 @media screen and (max-width: 800px) {
   :root {
-    --progress-bar-width: 190px;
-    --progress-bar-height: 190px;
+    --progress-bar-width: 250px;
+    --progress-bar-height: 250px;
     --font-size: 1.3rem;
   }
 }
 
 @media screen and (max-width: 500px) {
   :root {
-    --progress-bar-width: 120px;
-    --progress-bar-height: 120px;
-    --font-size: 1rem;
+    --progress-bar-width: 200px;
+    --progress-bar-height: 200px;
+    --font-size: 3rem;
   }
 }
