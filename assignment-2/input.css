@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --progress-bar-width: 300px;
+  --progress-bar-height: 300px;
+  --font-size: 2rem;
+}
+
+.outer-circle-progress {
+    width: var(--progress-bar-width);
+    height: var(--progress-bar-height);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-circle {
+    position: absolute;
+    width: calc(var(--progress-bar-width) - 30px);
+    height: calc(var(--progress-bar-height) - 30px);
+    border-radius: 50%;
+    background-color: lightgrey;
+}
+
+.percentage {
+  position: relative;
+  font-size: var(--font-size);
+  color: rgb(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    --progress-bar-width: 190px;
+    --progress-bar-height: 190px;
+    --font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --progress-bar-width: 120px;
+    --progress-bar-height: 120px;
+    --font-size: 1rem;
+  }
+}
