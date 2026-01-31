@@ -61,7 +61,7 @@ const manageTimer = () => {
             progressValue.textContent = `${timerInMin >= 10 ? timerInMin : '0'+timerInMin} : 00`;
             progressBar.style.background = subColor;
             document.title = 'Pomodoro Timer';
-            currentState('stopped', false);
+            setCurrentState('stopped', false);
             return;
         }
     }, speed)
