@@ -55,6 +55,7 @@ const manageTimer = () => {
         // filling the circular time progress bar with conic gradient
         progressBar.style.background = `conic-gradient(${mainColor} ${progressInDegrees}deg, ${subColor} 0deg)`;
 
+        // reset logic executed when the timer goes out
         if(startValue === 0) {
             clearInterval(progress);
             progressValue.textContent = `${timerInMin >= 10 ? timerInMin : '0'+timerInMin} : 00`;
